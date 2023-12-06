@@ -12,9 +12,19 @@ Asegúrate de tener instalado lo siguiente en tu sistema:
 
 ### Pasos para Configurar el Proyecto
 
-1. **Clonar el Repositorio:**
+**Clonar el Repositorio:**
    ```bash
-   git clone https://github.com/tu-usuario/mean-stack-task-manager.git
-   cd mean-stack-task-manager
+   git clone https://github.com/DavidCantunaMorales/TodoList.git
    ```
-   sdad
+**Distribución de Carpetas:**
+* ClientTodoList
+* ServerTodoList
+
+**Intalación de Dependencias:**  
+
+Dentro de la carpeta ```ClientTodoList``` abrir una termina y ejecutar el siguiente comando:
+   ```bash
+   npm install
+   ```
+Esto descargara todas las dependencias necesarias para ejecutar el proyecto.
+
