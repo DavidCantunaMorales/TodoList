@@ -45,7 +45,10 @@ Dentro de la carpeta ```ServerTodoList``` abrir una termina y ejecutar el siguie
    npm run dev
    ```
 
-Esto inicializara el servidor y por consola mostrar un mensaje diciendo el puerto en que corre el servidor y si la conexion a la base de mongo es correcta
+Esto inicializara el servidor y por consola mostrar un mensaje diciendo "El servidor está escuchando en el puerto 3000"
+"DB conectada"
+
+Con esto la aplicacion es lista y en funcionamiento. :3
 
 ## Indicaciones Adicionales
 
