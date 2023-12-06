@@ -1,0 +1,54 @@
+<div class="container mt-3">
+    <br>
+    <h2 class="text-center fw-bold">{{ titulo }}</h2>
+    <!-- Formulario para crear una nueva tarea -->
+    <br>
+    <div id="formularioTarea">
+        <form [formGroup]="tareaForm" (ngSubmit)="crearTarea()">
+            <div class="mb-3">
+                <label for="titulo" class="form-label"><strong>Título:</strong></label>
+                <input type="text" formControlName="titulo" class="form-control" id="titulo" required>
+                <div class="text-danger" 
+                *ngIf="tareaForm.get('titulo')?.hasError('required') && tareaForm.get('titulo')?.touched">
+                    <span>El nombre de la tarea es <strong>OBLIGATORIO</strong></span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label"><strong>Descripcion:</strong></label>
+                <textarea formControlName="descripcion" class="form-control" id="descripcion" required></textarea>
+                <div class="text-danger" 
+                *ngIf="tareaForm.get('descripcion')?.hasError('required') && tareaForm.get('descripcion')?.touched">
+                    <span>La descripcion de la tarea es <strong>OBLIGATORIA</strong></span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="fechaCreacion" class="form-label"><strong>Fecha de Creación:</strong></label>
+                <input type="date" formControlName="fechaCreacion" class="form-control" id="fechaCreacion" readonly>
+            </div>
+            <div class="mb-3">
+                <label for="fechaVencimiento" class="form-label"><strong>Fecha de Vencimiento:</strong></label>
+                <input type="date" formControlName="fechaVencimiento" class="form-control" id="fechaVencimiento" required>
+                <div class="text-danger" 
+                *ngIf="tareaForm.get('fechaVencimiento')?.hasError('required') && tareaForm.get('fechaVencimiento')?.touched">
+                    <span>La fecha de vencimiento de la tarea es <strong>OBLIGATORIA</strong></span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="completada" class="form-label"><strong>Estado de la Tarea:</strong></label>
+                <select formControlName="completada" class="form-select" id="completada" required>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Completada">Completada</option>
+                </select>
+                <div class="text-danger" 
+                *ngIf="tareaForm.get('completada')?.hasError('required') && tareaForm.get('completada')?.touched">
+                    <span>El estado de la tarea es <strong>OBLIGATORIO</strong></span>
+                </div>
+            </div>
+            <br>
+            <div class="mb-3 d-flex justify-content-between">
+                <button type="submit" [disabled]="tareaForm.invalid" class="btn btn-success">Aceptar</button>
+                <button type="button" class="btn btn-warning" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Volver</button>
+            </div>
+        </form>
+    </div>
+</div>
