@@ -49,8 +49,5 @@ Esto inicializara el servidor y por consola mostrar un mensaje diciendo el puert
 
 ## Indicaciones Adicionales
 
-En MongoDB Compass vas poner una nueva conección y vas a colocar la siguiente cadena de conexión. 
-   ```bash
-   mongodb+srv://admin:1234@atlascluster.zddio2m.mongodb.net/meantareas
-   ```
+Aquie poner algunas indicaciones mas despues si es que es necesario
 
